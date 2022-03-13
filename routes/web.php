@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\http\Controllers\AlumnoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +27,5 @@ Route::get('/Administrativos', function () {
     return view('Administrativos');
 });
 
-Route::get('/Alumnos', function () {
-    return view('Alumnos');
-});
+Route::resource('Alumnos', AlumnoController::class);
 
