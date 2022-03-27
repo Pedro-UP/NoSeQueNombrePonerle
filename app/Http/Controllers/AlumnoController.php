@@ -60,9 +60,10 @@ class AlumnoController extends Controller
      * @param  \App\Models\Alumno  $alumno
      * @return \Illuminate\Http\Response
      */
-    public function edit(Alumno $alumno)
+    public function edit($id)
     {
-        //
+        $Alumnos=Alumno::find($id);
+        return view('Alumnos.editar', compact ('Alumnos'));
     }
 
     /**
@@ -72,9 +73,12 @@ class AlumnoController extends Controller
      * @param  \App\Models\Alumno  $alumno
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Alumno $alumno)
+    public function update(Request $request,$id)
     {
-        //
+        $alumno=Alumno::find($id);
+        $alumno->update($request->all());
+        return redirect()->route('Alumnos.index');
+
     }
 
     /**
@@ -83,8 +87,10 @@ class AlumnoController extends Controller
      * @param  \App\Models\Alumno  $alumno
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Alumno $alumno)
+    public function destroy($id)
     {
-        //
+        $alumno=Alumno::find($id);
+        $alumno->delete();
+        return redirect()->route('Alumnos.index');
     }
 }
