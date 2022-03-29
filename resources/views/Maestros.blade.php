@@ -1,3 +1,9 @@
+@section('title','Maestros')
+
+@extends('layout')
+
+@section('content')
+
 Hola Mundo
 <title>Maestros</title>
 <br>
@@ -9,6 +15,5 @@ escribir
 
     <b>¡ASI!</b>
 </pre>
-<br>
-<a href="Administrativos">Administrativos</a> <br>
-<a href="Alumnos">Alumnos</a>
+
+@endsection
