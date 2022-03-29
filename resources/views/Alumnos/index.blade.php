@@ -1,3 +1,9 @@
+@section('title','Alumnos')
+
+@extends('layout')
+
+@section('content')
+
 <table>
     <a href="{{ route('Alumnos.create') }}"> Nuevo alumno </a>
 
@@ -38,3 +44,5 @@
         @endforeach()
     </tbody>
 </table>
+
+@endsection

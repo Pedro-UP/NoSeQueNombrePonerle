@@ -1,3 +1,9 @@
+@section('title','Administrativos')
+
+@extends('layout')
+
+@section('content')
+
 Bienvenido a Administrativos
 <br>
 <p align="center">Este texto se alineará al centro</p>
@@ -7,5 +13,5 @@ Bienvenido a Administrativos
 <p align="left">Este texto se alineará a la izquierda</p>
 
 <title>Administrativos</title> <br>
-<a href="Alumnos">Alumnos</a> <br>
-<a href="Maestros">Maestros</a>
+
+@endsection
