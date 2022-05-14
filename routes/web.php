@@ -21,11 +21,11 @@ Route::get('/', function () {
 
 Route::get('/Maestros', function () {
     return view('Maestros');
-});
+})->name("Maestros");
 
 Route::get('/Administrativos', function () {
     return view('Administrativos');
-});
+})->name("Administrativos");
 
 Route::resource('Alumnos', AlumnoController::class);
 
